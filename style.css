@@ -4,6 +4,21 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #f0db4f;
+  background-image: linear-gradient(120deg, #f0db4f, #cfc373);
+  font-family: "Roboto", sans-serif;
   color: #323330;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form,
+ul {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

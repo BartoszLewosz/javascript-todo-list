@@ -27,5 +27,16 @@ form button {
   padding: 0.5rem;
   font-size: 1.5rem;
   border: none;
-  background: white;
+  background: #fff;
+}
+
+form button {
+  color: #323330;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: transparent;
 }

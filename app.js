@@ -12,6 +12,24 @@ todoButton.addEventListener("click", addTodoItem);
 // functions
 function addTodoItem(event) {
   event.preventDefault();
-  console.log("hello!");
+  const todoDiv = document.createElement("div");
+  todoDiv.classList.add("todo");
+  const newTodoItem = document.createElement("li");
+  newTodoItem.innerText = "Hello";
+  newTodoItem.classList.add("todo-item");
+  todoDiv.appendChild(newTodoItem);
+
+  const completedButton = document.createElement("button");
+  completedButton.innerHTML = '<i class="fas fa-check"> </i>';
+  completedButton.classList.add("complete-btn");
+  todoDiv.appendChild(completedButton);
+  console.log(completedButton);
+  const trashButton = document.createElement("button");
+  trashButton.innerHTML = '<i class="fas fa-trash"> </i>';
+  trashButton.classList.add("trash-btn");
+  todoDiv.appendChild(trashButton);
+  console.log(trashButton);
+
+  todoList.appendChild(todoDiv);
 }
 // functions

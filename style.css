@@ -50,3 +50,9 @@ form button:hover {
   min-width: 33%;
   list-style: none;
 }
+.todo {
+  margin: 0.5rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}

@@ -43,12 +43,13 @@ function deleteTodoItem(event) {
 
   if (clickedItem.classList[0] === "trash-btn") {
     const todoItem = clickedItem.parentElement; // todoItem stores clickedItem's parent element
+    todo.classList.add("todo-removed");
     todoItem.remove();
   }
 
   if (clickedItem.classList[0] === "complete-btn") {
     const todoItem = clickedItem.parentElement;
-    todoItem.classList.toggle("completed");
+    todoItem.classList.toggle("todo-completed");
   }
 }
 // functions

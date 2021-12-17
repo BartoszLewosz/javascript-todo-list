@@ -80,8 +80,13 @@ form button:hover {
 .fa-check {
   pointer-events: none;
 }
-.completed {
+.todo-completed {
   text-decoration: line-through;
   background: #6cc644;
   opacity: 0.7;
+}
+
+.todo-removed {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
 }

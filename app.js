@@ -42,7 +42,8 @@ function deleteTodoItem(event) {
   console.log(clickedItem);
 
   if (clickedItem.classList[0] === "trash-btn") {
-    clickedItem.remove();
+    const todoItem = clickedItem.parentElement; // todoItem stores clickedItem's parent element
+    todoItem.remove();
   }
 }
 // functions

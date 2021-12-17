@@ -75,6 +75,7 @@ form button:hover {
 .complete-btn {
   background-color: #6cc644;
 }
-.fa-trash {
+.fa-trash,
+.fa-check {
   pointer-events: none;
 }

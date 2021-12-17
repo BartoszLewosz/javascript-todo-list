@@ -79,3 +79,8 @@ form button:hover {
 .fa-check {
   pointer-events: none;
 }
+.completed {
+  text-decoration: line-through;
+  background: #6cc644;
+  opacity: 0.5;
+}

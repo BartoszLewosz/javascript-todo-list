@@ -56,6 +56,7 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
 }
 /* this is child of div .todo */
 .todo-item {
@@ -82,5 +83,5 @@ form button:hover {
 .completed {
   text-decoration: line-through;
   background: #6cc644;
-  opacity: 0.5;
+  opacity: 0.7;
 }

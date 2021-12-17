@@ -45,5 +45,10 @@ function deleteTodoItem(event) {
     const todoItem = clickedItem.parentElement; // todoItem stores clickedItem's parent element
     todoItem.remove();
   }
+
+  if (clickedItem.classList[0] === "complete-btn") {
+    const todoItem = clickedItem.parentElement;
+    todoList.classList.toggle("completed");
+  }
 }
 // functions

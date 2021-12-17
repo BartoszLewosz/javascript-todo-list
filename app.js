@@ -44,6 +44,9 @@ function deleteTodoItem(event) {
   if (clickedItem.classList[0] === "trash-btn") {
     const todoItem = clickedItem.parentElement; // todoItem stores clickedItem's parent element
     todoItem.classList.add("todo-removed");
+    todoItem.addEventListener("transitionend", () => {
+      todoItem.remove();
+    });
     // todoItem.remove();
   }
 

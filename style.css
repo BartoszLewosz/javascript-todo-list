@@ -56,7 +56,7 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 /* this is child of div .todo */
 .todo-item {
@@ -87,6 +87,7 @@ form button:hover {
 }
 
 .todo-removed {
-  transform: translateY(8rem) rotateZ(20deg);
-  opacity: 0;
+  transform: translateY(8rem) rotateZ(40deg);
+  transition-delay: 200ms;
+  opacity: 0.5;
 }

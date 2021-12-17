@@ -38,6 +38,11 @@ function addTodoItem(event) {
 }
 
 function deleteTodoItem(event) {
-  console.log(event.target);
+  const clickedItem = event.target;
+  console.log(clickedItem);
+
+  if (clickedItem.classList[0] === "trash-btn") {
+    clickedItem.remove();
+  }
 }
 // functions

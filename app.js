@@ -29,20 +29,17 @@ function addTodoItem(event) {
   completedButton.innerHTML = '<i class="fas fa-check"> </i>';
   completedButton.classList.add("complete-btn");
   todoDiv.appendChild(completedButton);
-  console.log(completedButton);
 
   const trashButton = document.createElement("button");
   trashButton.innerHTML = '<i class="fas fa-trash"> </i>';
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
-  console.log(trashButton);
 
   todoList.appendChild(todoDiv);
 }
 
 function deleteTodoItem(event) {
   const clickedItem = event.target;
-  console.log(clickedItem);
 
   if (clickedItem.classList[0] === "trash-btn") {
     const todoItem = clickedItem.parentElement; // todoItem stores clickedItem's parent element

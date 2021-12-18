@@ -87,9 +87,9 @@ form button:hover {
 }
 
 .todo-removed {
-  transform: translateY(8rem) rotateZ(40deg);
-  transition-delay: 200ms;
-  opacity: 0.5;
+  transform: translateY(8rem) translateX(4rem) rotateZ(40deg);
+  opacity: 0.1;
+  transition: all 0.5s ease;
 }
 select {
   -webkit-appearance: none;

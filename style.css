@@ -114,8 +114,16 @@ select {
 .select::after {
   content: "\1401";
   position: absolute;
+  background: #fff;
+  color: #323330;
   top: 0;
   right: 0;
   padding: 0.5rem;
   pointer-events: none;
+  transition: ease-in-out 0.3s all;
+}
+
+.select:hover::after {
+  background: #323330;
+  color: #cfc373;
 }

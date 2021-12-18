@@ -91,3 +91,10 @@ form button:hover {
   transition-delay: 200ms;
   opacity: 0.5;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}

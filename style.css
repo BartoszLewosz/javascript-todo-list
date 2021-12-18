@@ -98,3 +98,24 @@ select {
   outline: none;
   border: none;
 }
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #323330;
+  background: #fff;
+  width: 10rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.select::after {
+  content: "\1401";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  pointer-events: none;
+}

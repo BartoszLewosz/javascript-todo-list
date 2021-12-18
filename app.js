@@ -58,4 +58,8 @@ function deleteTodoItem(event) {
     todoItem.classList.toggle("todo-completed");
   }
 }
+
+function todoFilterOption(e) {
+  const todos = todoList.childNodes;
+}
 // functions

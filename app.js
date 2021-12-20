@@ -21,9 +21,13 @@ function addTodoItem(event) {
 
   const newTodoItem = document.createElement("li");
   newTodoItem.innerText = todoInput.value;
-  todoInput.value = "";
   newTodoItem.classList.add("todo-item");
   todoDiv.appendChild(newTodoItem);
+  // console.log(todoDiv);
+  // console.log(newTodoItem);
+
+  // Add todoListLocalStorage to todo-list
+  saveLocalTodo(todoDiv.innerText);
 
   const completedButton = document.createElement("button");
   completedButton.innerHTML = '<i class="fas fa-check"> </i>';

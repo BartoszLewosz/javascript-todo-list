@@ -84,4 +84,56 @@ function todoFilterOption(e) {
     }
   });
 }
+
+function saveLocalTodo(todo) {
+  //check if local storage exists
+  let todoListLocalStorage; // declare variable to store Local storage
+  if (localStorage.getItem("todoListLocalStorage") === null) {
+    //if local storage is empty, create an empty array;
+    todoListLocalStorage = [];
+  } else {
+    // place local storage into empty variable;
+    todoListLocalStorage = JSON.parse(
+      localStorage.getItem("todoListLocalStorage")
+    );
+  }
+
+  todoListLocalStorage.push(todo); // assign Local Storage to variable and place it in 'todo' class, which is an element of div container
+  localStorage.setItem(
+    "todoListLocalStorage",
+    JSON.stringify(todoListLocalStorage)
+  );
+}
+function getTodos() {
+  let todoListLocalStorage;
+  if (localStorage.getItem("todoListLocalStorage") === null) {
+    todoListLocalStorage = [];
+  } else {
+    todoListLocalStorage = JSON.parse(
+      localStorage.getItem("todoListLocalStorage")
+    );
+  }
+  todoListLocalStorage.forEach(function (todo) {
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
+
+    const newTodoItem = document.createElement("li");
+    newTodoItem.innerText = todo;
+    newTodoItem.classList.add("todo-item");
+    todoDiv.appendChild(newTodoItem);
+    // console.log(todoDiv);
+    // console.log(newTodoItem);
+    const completedButton = document.createElement("button");
+    completedButton.innerHTML = '<i class="fas fa-check"> </i>';
+    completedButton.classList.add("complete-btn");
+    todoDiv.appendChild(completedButton);
+
+    const trashButton = document.createElement("button");
+    trashButton.innerHTML = '<i class="fas fa-trash"> </i>';
+    trashButton.classList.add("trash-btn");
+    todoDiv.appendChild(trashButton);
+
+    todoList.appendChild(todoDiv);
+  });
+}
 // functions

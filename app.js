@@ -41,6 +41,7 @@ function addTodoItem(event) {
   todoDiv.appendChild(trashButton);
 
   todoList.appendChild(todoDiv);
+  todoInput.value = "";
 }
 
 function deleteTodoItem(event) {

@@ -155,5 +155,8 @@ function removeLocalStorage(todo) {
     "todoListLocalStorage",
     JSON.stringify(todoListLocalStorage)
   );
+  if (todoListLocalStorage.length === 0) {
+    localStorage.clear();
+  }
 }
 // functions

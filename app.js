@@ -50,6 +50,7 @@ function deleteTodoItem(event) {
   if (clickedItem.classList[0] === "trash-btn") {
     const todoItem = clickedItem.parentElement; // todoItem stores clickedItem's parent element
     todoItem.classList.add("todo-removed");
+    removeLocalStorage(todoItem);
     todoItem.addEventListener("transitionend", () => {
       todoItem.remove();
     });
@@ -137,5 +138,17 @@ function getTodos() {
 
     todoList.appendChild(todoDiv);
   });
+}
+
+function removeLocalStorage(todo) {
+  let todoListLocalStorage;
+  if (localStorage.getItem("todoListLocalStorage") === null) {
+    todoListLocalStorage = [];
+  } else {
+    todoListLocalStorage = JSON.parse(
+      localStorage.getItem("todoListLocalStorage")
+    );
+  }
+  console.log(todo.children[0].innerText);
 }
 // functions

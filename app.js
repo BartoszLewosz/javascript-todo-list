@@ -149,6 +149,11 @@ function removeLocalStorage(todo) {
       localStorage.getItem("todoListLocalStorage")
     );
   }
-  console.log(todo.children[0].innerText);
+  const todoIndex = todo.children[0].innerText; //grab the first child of div 'todo'
+  todoListLocalStorage.splice(todoListLocalStorage.indexOf(todoIndex), 1); // grab 1 element of todoIndex(the first child of 'todo' div)
+  localStorage.setItem(
+    "todoListLocalStorage",
+    JSON.stringify(todoListLocalStorage)
+  );
 }
 // functions
